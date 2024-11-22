@@ -27,10 +27,9 @@ public class CustomerService {
                 .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
     }
 
-    public Customer save(Customer customer) {
+    public Customer saveCustomer(Customer customer) {
         return customerRepository.save(customer);
     }
-
     public void delete(Long id) {
         customerRepository.deleteById(id);
     }
